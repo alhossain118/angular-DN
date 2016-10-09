@@ -6,13 +6,17 @@
   <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
 
-  <script src="/angular/angular.min.js" charset="utf-8"></script>
+  <script src="/angular/angular.min.js"></script>
+  <script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/js/module.js"></script>
+  <script src="/js/controller.js"></script>
   <script src='/js/main.js'></script>
 </head>
-<body ng-app='myApp'>
+<body ng-app='myApp' ng-controller='mainCtrl'>
   <h2>DN CLONE</h2>
-  <div class="container">
-    <h2>Hi there</h2>
-  </div>
+
+  <div ui-view></div>
+
+
 </body>
 </html>
