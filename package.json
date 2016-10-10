@@ -15,6 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-bootstrap": "^0.12.2",
+    "angular-ui-bootstrap": "^2.1.4",
     "angular-ui-router": "^0.3.1",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
@@ -23,6 +25,7 @@
     "express": "^4.14.0",
     "favicon": "0.0.2",
     "mongoose": "^4.6.3",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0"
   }
 }
