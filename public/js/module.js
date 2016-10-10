@@ -6,11 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/',
       templateUrl:'html/home.html'
     })
-    // .state('home',{
-    //   url:'/',
-    //   templateUrl:'html/home.html',
-    //   controller:'mainCtrl'
-    // })
 
+    
     $urlRouterProvider.otherwise('/')
 })
