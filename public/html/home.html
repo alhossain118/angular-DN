@@ -1,53 +1,158 @@
 <h3>home</h3>
 
 <form ng-submit='addCard(card)'>
-  <div class="form-group">
-    <label>Card Name:</label>
-    <input type="text" class="form-control" placeholder="Card Name">
-  </div>
-  <div ng-show='name' ng-model='card' class="form-group">
-    <label><p>Card Type</p></label>
-    <select class="form-control" ng-model='card.typeZ' ng-value='yugioh' >
-  <option>Monster</option>
-  <option>Spell</option>
-  <option>Trap</option>
-</select>
+    <div class="form-group">
+        <label>Card Name:</label>
+        <input type="text" class="form-control" ng-model='card.cardName' placeholder="Card Name">
+    </div>
+    <div ng-show='name' ng-model='card' class="form-group">
+        <label>
+            <p>Card Type</p>
+        </label>
+        <select class="form-control" ng-model='card.typeOfCard' ng-value='yugioh'>
+            <option>Monster</option>
+            <option>Spell</option>
+            <option>Trap</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>Attribute</p>
+        </label>
+        <select class="form-control" ng-model='card.attribute'>
+            <option>Dark</option>
+            <option>Divine</option>
+            <option>Earth</option>
+            <option>Fire</option>
+            <option>Light</option>
+            <option>Water</option>
+            <option>Wind</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>Type</p>
+        </label>
+        <select class="form-control" ng-model='card.type'>
+            <option>Aqua</option>
+            <option>Beast</option>
+            <option>Beast-Warrior</option>
+            <option>Creator-god</option>
+            <option>Dinosaur</option>
+            <option>Divine-Beast</option>
+            <option>Dragon</option>
+            <option>Fiend</option>
+            <option>Fish</option>
+            <option>Machine</option>
+            <option>Insect</option>
+            <option>Plant</option>
+            <option>Psychic</option>
+            <option>Pyro</option>
+            <option>Rock</option>
+            <option>Sea Serpent</option>
+            <option>Spellcastor</option>
+            <option>Thunder</option>
+            <option>Warrior</option>
+            <option>WingedBeast</option>
+            <option>Wyrm</option>
+            <option>Zombie</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" ng-model='card.attribute' class="form-group">
+        <label>
+            <p>Level</p>
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="none"> None
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="0"> 0
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="1"> 1
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="2"> 2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="3"> 3
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="4"> 4
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="5"> 5
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="6"> 6
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="7"> 7
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="8"> 8
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="9"> 9
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="10"> 10
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="11"> 11
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="12"> 12
+        </label>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Spell'" class="form-group">
+        <label>
+            <p>Type Of Spell</p>
+        </label>
+        <select class="form-control" ng-model='card.typeOfSpell'>
+            <option>Normal</option>
+            <option>Continuous</option>
+            <option>Equip</option>
+            <option>Field</option>
+            <option>Quick-play</option>
+            <option>Ritual</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Trap'" class="form-group">
+        <label>
+            <p>Type Of Trap</p>
+        </label>
+        <select class="form-control" ng-model='card.typeOfTrap'>
+            <option>Normal</option>
+            <option>Continuous</option>
+            <option>Counter</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+    <label for="exampleInputEmail1">Effect/Description</label>
+    <textarea type="text" class="form-control"  placeholder="Enter description" row='5' cols='50'>
+    </textarea>
   </div>
 
-  <div ng-show='name' ng-model='card' class="form-group">
-    <label><p>Attribute</p></label>
-    <select class="form-control" ng-model='card.typeZ' >
-  <option>Monster</option>
-  <option>Spell</option>
-  <option>Trap</option>
-</select>
-  </div>
 
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+
+    <button type="submit" class="btn btn-default">Submit</button>
 </form>
-<h3 ng-show='monster'>{{card.typeZ}}</h3>
+<h3 ng-show='monster'>{{card.typeOfCard}}</h3>
 <form>
 
-<h2>Which is your favorite?</h2>
-     <label ng-repeat="name in names">
-       {{name}}
-       <input type="radio"
-              ng-model="my.favorite"
-              ng-value="name"
-
-
-              >
-     </label>
-   <div ng-hide='check'>You chose {{my.favorite}}</div>
-   <div ng-if='card.typeZ === "Monster"'>Monster has been selected</div>
- </form>
+    <h2>Which is your favorite?</h2>
+    <label ng-repeat="name in names">
+        {{name}}
+        <input type="radio" ng-model="my.favorite" ng-value="name">
+    </label>
+    <div ng-hide='check'>You chose {{my.favorite}}</div>
+    <div ng-if='card.typeOfCard === "Monster"'>Monster has been selected</div>
+    {{card.attribute}}
+</form>
