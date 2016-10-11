@@ -7,7 +7,11 @@
         <label>Card Name:</label>
         <input type="text" class="form-control" ng-model='card.cardName' placeholder="Card Name">
     </div>
-    <div ng-show='name' ng-model='card' class="form-group">
+    <div class="form-group">
+        <label>Image Src Url:</label>
+        <input type="text" class="form-control" ng-model='card.image' placeholder="Card Name">
+    </div>
+    <div ng-model='card' class="form-group">
         <label>
             <p>Card Type</p>
         </label>
@@ -15,6 +19,18 @@
             <option>Monster</option>
             <option>Spell</option>
             <option>Trap</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>Banlist Restrictions</p>
+        </label>
+        <select class="form-control" ng-model='card.banlist'>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
         </select>
     </div>
 
@@ -30,6 +46,116 @@
             <option>Light</option>
             <option>Water</option>
             <option>Wind</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>Normal</p>
+        </label>
+        <select class="form-control" ng-model='card.normal'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>fusion</p>
+        </label>
+        <select class="form-control" ng-model='card.fusion'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>synchro</p>
+        </label>
+        <select class="form-control" ng-model='card.synchro'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>xyz</p>
+        </label>
+        <select class="form-control" ng-model='card.xyz'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>pendulum</p>
+        </label>
+        <select class="form-control" ng-model='card.pendulum'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>tuner</p>
+        </label>
+        <select class="form-control" ng-model='card.tuner'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>gemini</p>
+        </label>
+        <select class="form-control" ng-model='card.gemini'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>union</p>
+        </label>
+        <select class="form-control" ng-model='card.union'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>spirit</p>
+        </label>
+        <select class="form-control" ng-model='card.spirit'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>flip</p>
+        </label>
+        <select class="form-control" ng-model='card.flip'>
+            <option>true</option>
+            <option>false</option>
+        </select>
+    </div>
+
+    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+        <label>
+            <p>toon</p>
+        </label>
+        <select class="form-control" ng-model='card.toon'>
+            <option>true</option>
+            <option>false</option>
         </select>
     </div>
 
@@ -98,7 +224,7 @@
 
     <div class="form-group">
     <label for="exampleInputEmail1">Effect/Description</label>
-    <textarea type="text" class="form-control"  ng-model='card.effect' placeholder="Enter description" row='5' cols='50'>
+    <textarea type="text" class="form-control"  ng-model='card.effectDesc' placeholder="Enter description" row='5' cols='50'>
     </textarea>
   </div>
 

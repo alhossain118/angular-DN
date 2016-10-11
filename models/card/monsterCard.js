@@ -13,11 +13,11 @@ let monsterCard = new mongoose.Schema({
     type: Number,
     default: 0
   },
-  picture: {
+  image: {
     type: String,
     default: "No image provided"
   },
-  monsterType: {
+  type: {
     type:String,
     default: "Zombie"
   },

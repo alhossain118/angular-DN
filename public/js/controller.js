@@ -18,13 +18,17 @@ angular.module('myApp')
       $scope.my = { favorite: 'unicorns' };
 
   }])
-    .controller('addCardCtrl', function($scope){
+    .controller('addCardCtrl', function($scope,MonsterCard){
       console.log('addCardCtrl');
 
       $scope.addCard = function (card) {
         console.log('card', card);
-        if(card.typeOfCard ==='Trap'){
-          alert('its a trap card')
+        if(card.typeOfCard ==='Monster'){
+          alert('its a Monster card')
+          MonsterCard.createCard(card)
+            .then(res => {
+              console.log(res);
+            })
         }
       }
 
