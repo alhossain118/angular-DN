@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.router','ui.bootstrap'])
+var app = angular.module('myApp', ['ui.router','ui.bootstrap','ngDragDrop'])
 
 app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider

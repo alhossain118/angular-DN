@@ -2,19 +2,16 @@ const mongoose = require('mongoose');
 
 let trapCard = new mongoose.Schema({
   cardName: String,
-  picture: String,
-  normal:{
-    type: Boolean,
-    default: false
+  image: String,
+  typeOfTrap: {
+type: String,
+    default: "Normal"
   },
-  continuous: {
-    type: Boolean,
-    default: false
+  effectDesc:{
+    type: String
   },
-  counter: {
-    type: Boolean,
-    default: false
-  },
+  banlist: Number
+
 })
 
 let Tcard = mongoose.model('Tcard', trapCard)

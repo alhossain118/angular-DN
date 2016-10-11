@@ -1,4 +1,4 @@
-<div class="col-sm-6 addCardz" >
+<div class="col-sm-4 addCardz" >
 <h3>Add a new card to Database</h3>
 
 
@@ -22,7 +22,7 @@
         </select>
     </div>
 
-    <div ng-if="card.typeOfCard === 'Monster'" class="form-group">
+    <div class="form-group">
         <label>
             <p>Banlist Restrictions</p>
         </label>
@@ -223,7 +223,7 @@
     </div>
 
     <div class="form-group">
-    <label for="exampleInputEmail1">Effect/Description</label>
+    <label>Effect/Description</label>
     <textarea type="text" class="form-control"  ng-model='card.effectDesc' placeholder="Enter description" row='5' cols='50'>
     </textarea>
   </div>
