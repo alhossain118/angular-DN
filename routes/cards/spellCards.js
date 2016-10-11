@@ -1,5 +1,5 @@
 const express   = require('express');
-const Scard     = require('../models/spellCard')
+const Scard     = require('../../models/card/spellCard')
 
 let router = express.Router();
 

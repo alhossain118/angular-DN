@@ -18,3 +18,14 @@ angular.module('myApp')
       $scope.my = { favorite: 'unicorns' };
 
   }])
+    .controller('addCardCtrl', function($scope){
+      console.log('addCardCtrl');
+
+      $scope.addCard = function (card) {
+        console.log('card', card);
+        if(card.typeOfCard ==='Trap'){
+          alert('its a trap card')
+        }
+      }
+
+    })

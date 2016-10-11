@@ -1,8 +1,36 @@
 body{
   /*color: white*/
-  /*background-image: url('https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcLOzCqhhrqcBrHAcalpKdMVGbc5pJ6R5foyxi91KJVE.5r00WPPrf19JP319uuo5T7FroUAroXCrVcT9IC_ubdJ3.767d71aKXABVs.Qxv1kCYmJWd11OiJlEXMwnNa9XpZRPVjSlsAuTil12txsL8GHPBLS5xMhn8hEgwSOXtPU-&format=jpg')*/
+  /*background-image: url('http://orig11.deviantart.net/956b/f/2015/053/8/7/_render__dark_magician_girl__chibi__by_yugiohdragon999-d8j3gko.png')*/
   background-color:pink
 }
 p{
   color: blue
+}
+.logo{
+  height: 50px;
+  width: 75px;
+}
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+.addCardz {
+  background-color: lightblue;
 }
