@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
     "angular-bootstrap": "^0.12.2",
     "angular-dragdrop": "^1.0.13",
     "angular-ui-bootstrap": "^2.1.4",

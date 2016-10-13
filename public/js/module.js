@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ui.router','ui.bootstrap','ngDragDrop'])
+var app = angular.module('myApp', ['ui.router','ui.bootstrap','ngDragDrop','ngAnimate'])
 
 app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
@@ -14,6 +14,11 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/addCard',
       templateUrl:'html/addCard.html',
       controller: 'addCardCtrl'
+    })
+    .state('todo', {
+      url:'/todo',
+      templateUrl:'html/todo.html',
+      controller:'todoCtrl'
     })
 
 

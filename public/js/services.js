@@ -1,5 +1,20 @@
 angular.module('myApp')
 
+.service('Todo', function($http) {
+  this.getTodos = () => {
+    return $http.get(`api/todos`)
+  }
+  this.createTodo = todo => {
+    return $http.post(`api/todos`, todo)
+  }
+  this.editTodo = todo => {
+    console.log('hit');
+    return $http.put(`api/todos/${todo._id}`, todo)
+  }
+  this.deleteTodo = todo => {
+    return $http.delete(`api/todos/${todo}`)
+  }
+})
 .service('MonsterCard', function($http) {
     this.createMCard = (card) => {
         return $http.post('/api/monsterCards', card)

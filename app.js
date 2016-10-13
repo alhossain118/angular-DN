@@ -1,7 +1,7 @@
 'use strict';
 
 const PORT            = process.env.PORT || 8080;
-const MONGO_URL       = process.env.MONGO_URI || 'mongodb://localhost/dnClone';
+const MONGO_URL       = process.env.MONGO_URI || 'mongodb://localhost/todo';
 
 const express         = require('express');
 const path            = require('path');

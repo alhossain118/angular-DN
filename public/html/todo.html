@@ -1,0 +1,49 @@
+<h2>todo</h2>
+<div class="col-sm-6">
+
+<form ng-submit='addTodo(todo)'>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" ng-model='todo.name'>
+  </div>
+  <div class="form-group">
+    <label>Number</label>
+    <input type="text" class="form-control" ng-model='todo.number'>
+  </div>
+
+
+  <button class="btn btn-default">Submit</button>
+</form>
+</div>
+
+<table class='table'>
+  <thead>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </thead>
+  <tbody ng-repeat='list in lists track by $index' >
+    <td>{{list.name}}</td>
+    <td>{{list.number}}</td>
+    <td><button class='btn btn-info' ng-click='editTodo(list,$index)'>Edit</button></td>
+    <td><button class='btn btn-danger' ng-click='deleteTodo(list,$index)'>Delete</button></td>
+  </tbody>
+</table>
+
+<div class="col-sm-6">
+
+<form>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" ng-model='edit.name'>
+  </div>
+  <div class="form-group">
+    <label>Number</label>
+    <input type="text" class="form-control" ng-model='edit.number'>
+  </div>
+
+
+  <button class="btn btn-default" ng-click='saveEdit(edit)'>Edit Submit</button>
+</form>
+</div>
